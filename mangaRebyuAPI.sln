@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PresentationLayerAPI", "capaPresentacionAPI\PresentationLayerAPI.csproj", "{6AF1B962-622D-420F-8952-7D00D88F454D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayerAPI", "DataLayerAPI\DataLayerAPI.csproj", "{43380B37-404F-40C7-8C63-DB0378B7BA5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AF1B962-622D-420F-8952-7D00D88F454D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AF1B962-622D-420F-8952-7D00D88F454D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AF1B962-622D-420F-8952-7D00D88F454D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AF1B962-622D-420F-8952-7D00D88F454D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43380B37-404F-40C7-8C63-DB0378B7BA5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43380B37-404F-40C7-8C63-DB0378B7BA5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43380B37-404F-40C7-8C63-DB0378B7BA5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43380B37-404F-40C7-8C63-DB0378B7BA5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A3A19B6-15D5-4885-A32B-EC7A57743AF7}
+	EndGlobalSection
+EndGlobal
