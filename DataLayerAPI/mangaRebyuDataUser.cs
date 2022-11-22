@@ -35,24 +35,21 @@ namespace DataLayerAPI
             }
         }
 
-        public static bool consultarIngreso(string username)
+        public static bool consultarIngreso(string password)
         {
             conexion.Open();
 
             string select = string.Format(
                 "SELECT * FROM Users WHERE username = '{0}'",
-                username
+                password
                 );
             SqlCommand comando = new SqlCommand(select, conexion);
 
             SqlDataReader dataReader = comando.ExecuteReader();
 
-            RegisterDTO ingreso = new RegisterDTO();
-
             while (dataReader.Read())
             {
-                ingreso.username = username;
-                ingreso.password = dataReader.GetValue(1).ToString();
+                string username = dataReader.GetValue(0).ToString();
             }
             conexion.Close();
 
