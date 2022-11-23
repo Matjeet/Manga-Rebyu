@@ -16,5 +16,14 @@ namespace PresentationLayerAPI.Controllers
             response.response = mangaRebyuDataManga.createRegisterManga(request.username, request.idManga, request.rating, request.coment);
             return response;
         }
+
+        [HttpGet]
+        [Route("api/sendDataMovil")]
+        public ResponseSendDataMovil APItoMovil([FromQuery]RequestSendDataMovil request)
+        {
+            ResponseSendDataMovil response = new ResponseSendDataMovil();
+            response.data = mangaRebyuDataManga.sendDataMovil(request.idManga);
+            return response;
+        }
     }
 }

@@ -45,8 +45,8 @@ namespace DataLayerAPI
         public static Dictionary<string, List<string>> sendDataMovil(string idManga)
         {
             conexion.Open();
-            List<string> values = new List<string>();
-            Dictionary<string, List<string>> data = new Dictionary<string, List<string>>(); 
+            Dictionary<string, List<string>> data = new Dictionary<string, List<string>>();
+            string value1;
 
             string select = string.Format(
                 "SELECT * FROM Manga WHERE idManga = '{0}'",
@@ -58,9 +58,9 @@ namespace DataLayerAPI
 
             while (dataReader.Read())
             {
+                List<string> values = new List<string>();
                 values.Add(dataReader.GetValue(3).ToString());
                 values.Add(dataReader.GetValue(4).ToString());
-                values.Clear();
                 data.Add(dataReader.GetValue(1).ToString(),values);
             }
             conexion.Close();
@@ -70,7 +70,6 @@ namespace DataLayerAPI
         public static Dictionary<string, List<string>> sendDataDesktop(bool flag)
         {
             conexion.Open();
-            List<string> values = new List<string>();
             Dictionary<string, List<string>> data = new Dictionary<string, List<string>>();
 
             string select = string.Format(
@@ -81,10 +80,10 @@ namespace DataLayerAPI
 
             while (dataReader.Read())
             {
+                List<string> values = new List<string>();
                 values.Add(dataReader.GetValue(2).ToString());
                 values.Add(dataReader.GetValue(3).ToString());
                 values.Add(dataReader.GetValue(4).ToString());
-                values.Clear();
                 data.Add(dataReader.GetValue(1).ToString(), values);
             }
             conexion.Close();
