@@ -67,7 +67,7 @@ namespace DataLayerAPI
 
             return data;
         }
-        public static Dictionary<string, List<string>> sendDataDesktop()
+        public static Dictionary<string, List<string>> sendDataDesktop(bool flag)
         {
             conexion.Open();
             List<string> values = new List<string>();
