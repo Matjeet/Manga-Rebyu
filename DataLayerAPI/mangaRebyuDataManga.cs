@@ -15,7 +15,7 @@ namespace DataLayerAPI
         {
             conexion = new SqlConnection(@"Password=Contraseña123;Persist Security Info=True;User ID=sa;Initial Catalog=mangaRebyu;Data Source=DESKTOP-HTIGAP3\SQLEXPRESS");
         }
-        public static bool crearRegistroManga(string username, string manga, int rating, string coment)
+        public static bool createRegisterManga(string username, string manga, int rating, string coment)
         {
             conexion.Open();
 
@@ -41,5 +41,26 @@ namespace DataLayerAPI
                 return true;
             }
         }
+
+        //public static Dictionary<string,string> sendDataMovil(string idManga)
+        //{
+        //    conexion.Open();
+
+        //    string select = string.Format(
+        //        "SELECT * FROM Users WHERE username = '{0}'",
+        //        idManga
+        //        );
+        //    SqlCommand comando = new SqlCommand(select, conexion);
+
+        //    SqlDataReader dataReader = comando.ExecuteReader();
+
+        //    while (dataReader.Read())
+        //    {
+        //        string username = dataReader.GetValue(0).ToString();
+        //    }
+        //    conexion.Close();
+
+        //    return true;
+        //}
     }
 }

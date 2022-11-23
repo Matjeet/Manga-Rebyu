@@ -10,7 +10,7 @@ namespace DataLayerAPI
         {
             conexion = new SqlConnection(@"Password=Contraseña123;Persist Security Info=True;User ID=sa;Initial Catalog=mangaRebyu;Data Source=DESKTOP-HTIGAP3\SQLEXPRESS");
         }
-        public static bool crearRegistro(string username, string password)
+        public static bool createRegister(string username, string password)
         {
             conexion.Open();
 
@@ -35,12 +35,12 @@ namespace DataLayerAPI
             }
         }
 
-        public static bool consultarIngreso(string password)
+        public static bool searchIncome(string password)
         {
             conexion.Open();
 
             string select = string.Format(
-                "SELECT * FROM Users WHERE username = '{0}'",
+                "SELECT * FROM Users WHERE password = '{0}'",
                 password
                 );
             SqlCommand comando = new SqlCommand(select, conexion);

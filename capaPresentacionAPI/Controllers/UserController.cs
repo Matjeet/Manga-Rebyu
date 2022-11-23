@@ -15,7 +15,7 @@ namespace capaPresentacionAPI.Controllers
         public ResponseSignUp SignUp([FromBody] RequestSignUp request)
         {
             ResponseSignUp response = new ResponseSignUp();
-            response.result = mangaRebyuDataUser.crearRegistro(request.userName, request.password);
+            response.result = mangaRebyuDataUser.createRegister(request.userName, request.password);
             return response;
         }
 
@@ -24,7 +24,7 @@ namespace capaPresentacionAPI.Controllers
         public ResponseLogin Login([FromQuery]RequestLogin request)
         {
             ResponseLogin response = new ResponseLogin();
-            response.result = mangaRebyuDataUser.consultarIngreso(request.password);
+            response.result = mangaRebyuDataUser.searchIncome(request.password);
             return response;
         }
     }
