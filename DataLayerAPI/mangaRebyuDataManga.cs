@@ -42,25 +42,54 @@ namespace DataLayerAPI
             }
         }
 
-        //public static Dictionary<string,string> sendDataMovil(string idManga)
-        //{
-        //    conexion.Open();
+        public static Dictionary<string, List<string>> sendDataMovil(string idManga)
+        {
+            conexion.Open();
+            List<string> values = new List<string>();
+            Dictionary<string, List<string>> data = new Dictionary<string, List<string>>(); 
 
-        //    string select = string.Format(
-        //        "SELECT * FROM Users WHERE username = '{0}'",
-        //        idManga
-        //        );
-        //    SqlCommand comando = new SqlCommand(select, conexion);
+            string select = string.Format(
+                "SELECT * FROM Manga WHERE idManga = '{0}'",
+                idManga
+                );
+            SqlCommand comando = new SqlCommand(select, conexion);
 
-        //    SqlDataReader dataReader = comando.ExecuteReader();
+            SqlDataReader dataReader = comando.ExecuteReader();
 
-        //    while (dataReader.Read())
-        //    {
-        //        string username = dataReader.GetValue(0).ToString();
-        //    }
-        //    conexion.Close();
+            while (dataReader.Read())
+            {
+                values.Add(dataReader.GetValue(3).ToString());
+                values.Add(dataReader.GetValue(4).ToString());
+                values.Clear();
+                data.Add(dataReader.GetValue(1).ToString(),values);
+            }
+            conexion.Close();
 
-        //    return true;
-        //}
+            return data;
+        }
+        public static Dictionary<string, List<string>> sendDataDesktop()
+        {
+            conexion.Open();
+            List<string> values = new List<string>();
+            Dictionary<string, List<string>> data = new Dictionary<string, List<string>>();
+
+            string select = string.Format(
+                "SELECT * FROM Manga");
+            SqlCommand comando = new SqlCommand(select, conexion);
+
+            SqlDataReader dataReader = comando.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                values.Add(dataReader.GetValue(2).ToString());
+                values.Add(dataReader.GetValue(3).ToString());
+                values.Add(dataReader.GetValue(4).ToString());
+                values.Clear();
+                data.Add(dataReader.GetValue(1).ToString(), values);
+            }
+            conexion.Close();
+
+            return data;
+        }
     }
 }
