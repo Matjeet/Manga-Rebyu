@@ -37,8 +37,9 @@ namespace DataLayerAPI
 
         public static bool searchIncome(string password)
         {
+            string username;
+            int i = 0;
             conexion.Open();
-
             string select = string.Format(
                 "SELECT * FROM Users WHERE password = '{0}'",
                 password
@@ -49,11 +50,19 @@ namespace DataLayerAPI
 
             while (dataReader.Read())
             {
-                string username = dataReader.GetValue(0).ToString();
+                username = dataReader.GetValue(0).ToString();
+                i++;
             }
-            conexion.Close();
 
-            return true;
+            conexion.Close();
+            if (i != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
