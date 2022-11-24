@@ -19,10 +19,19 @@ namespace PresentationLayerAPI.Controllers
 
         [HttpGet]
         [Route("api/sendDataMovil")]
-        public ResponseSendDataMovil APItoMovil([FromQuery]RequestSendDataMovil request)
+        public ResponseSendDataMovil APIMovil([FromQuery]RequestSendDataMovil request)
         {
             ResponseSendDataMovil response = new ResponseSendDataMovil();
             response.data = mangaRebyuDataManga.sendDataMovil(request.idManga);
+            return response;
+        }
+
+        [HttpGet]
+        [Route("api/sendDataDesktop")]
+        public ResponseSendDataDesktop APIDesktop([FromQuery] RequestSendDataDesktop request)
+        {
+            ResponseSendDataDesktop response = new ResponseSendDataDesktop();
+            response.data = mangaRebyuDataManga.sendDataDesktop(request.flag);
             return response;
         }
     }

@@ -80,11 +80,23 @@ namespace DataLayerAPI
 
             while (dataReader.Read())
             {
-                List<string> values = new List<string>();
-                values.Add(dataReader.GetValue(2).ToString());
-                values.Add(dataReader.GetValue(3).ToString());
-                values.Add(dataReader.GetValue(4).ToString());
-                data.Add(dataReader.GetValue(1).ToString(), values);
+                if (data.ContainsKey(dataReader.GetValue(1).ToString()))
+                {
+                    List<string> valuesDictionary = new List<string>();
+                    valuesDictionary = data[dataReader.GetValue(1).ToString()];
+                    valuesDictionary.Add(dataReader.GetValue(2).ToString());
+                    valuesDictionary.Add(dataReader.GetValue(3).ToString());
+                    valuesDictionary.Add(dataReader.GetValue(4).ToString());
+                    data[dataReader.GetValue(1).ToString()] = valuesDictionary;
+                }
+                else
+                {
+                    List<string> values = new List<string>();
+                    values.Add(dataReader.GetValue(2).ToString());
+                    values.Add(dataReader.GetValue(3).ToString());
+                    values.Add(dataReader.GetValue(4).ToString());
+                    data.Add(dataReader.GetValue(1).ToString(), values);
+                }
             }
             conexion.Close();
 
