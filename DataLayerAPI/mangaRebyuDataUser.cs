@@ -35,14 +35,14 @@ namespace DataLayerAPI
             }
         }
 
-        public static bool searchIncome(string password)
+        public static bool searchIncome(string username, string password)
         {
-            string username;
             int i = 0;
             conexion.Open();
             string select = string.Format(
-                "SELECT * FROM Users WHERE password = '{0}'",
-                password
+                "SELECT * FROM Users WHERE password = '{0}' AND username = '{1}'",
+                password,
+                username
                 );
             SqlCommand comando = new SqlCommand(select, conexion);
 
