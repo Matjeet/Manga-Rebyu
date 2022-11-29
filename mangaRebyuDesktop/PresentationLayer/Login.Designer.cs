@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             this.tbUsuario = new System.Windows.Forms.TextBox();
             this.tbContraseña = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
@@ -95,12 +96,17 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+=======
+            this.SuspendLayout();
+            // 
+>>>>>>> b208205bf4d041a9966dbb193be8821a4098f627
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
+<<<<<<< HEAD
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.tbContraseña);
@@ -114,6 +120,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+=======
+            this.Name = "Login";
+            this.Text = "Iniciar Sesión";
+            this.Load += new System.EventHandler(this.Login_Load);
+            this.ResumeLayout(false);
+>>>>>>> b208205bf4d041a9966dbb193be8821a4098f627
 
         }
 

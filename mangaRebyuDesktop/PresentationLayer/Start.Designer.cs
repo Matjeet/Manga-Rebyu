@@ -98,7 +98,10 @@
             this.Name = "Start";
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.Start_Load);
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+=======
+>>>>>>> b208205bf4d041a9966dbb193be8821a4098f627
             this.ResumeLayout(false);
 
         }

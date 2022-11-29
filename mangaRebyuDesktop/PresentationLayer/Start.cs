@@ -7,6 +7,7 @@ namespace PresentationLayer
             InitializeComponent();
         }
 
+<<<<<<< HEAD
         
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -28,6 +29,8 @@ namespace PresentationLayer
             login.Show();
         }
 
+=======
+>>>>>>> b208205bf4d041a9966dbb193be8821a4098f627
         private void Start_Load(object sender, EventArgs e)
         {
 

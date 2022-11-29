@@ -26,6 +26,7 @@ namespace PresentationLayer
         {
 
         }
+<<<<<<< HEAD
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
@@ -86,5 +87,7 @@ namespace PresentationLayer
             Start start = new Start();
             start.Show();
         }
+=======
+>>>>>>> b208205bf4d041a9966dbb193be8821a4098f627
     }
 }
