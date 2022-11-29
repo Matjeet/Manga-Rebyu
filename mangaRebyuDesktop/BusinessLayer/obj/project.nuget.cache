@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "pXOEl2XgpIeY7IjH0tlp0sz8UOspg3gM+8bU/Dz0GXLH+vZvf8yIR9saotvTnVgb47U/KVPLVo9XVZfp/Sb+vw==",
+  "dgSpecHash": "tu5+mCOz0bC+g95cH3nGKpgXlBxgVo6BfSdomvy0CQSoHp8zllrnLZSSpy1eRZ6YW7kpEnUvOUPyf7G/GlG2+A==",
   "success": true,
-  "projectFilePath": "D:\\Documentos\\Proyectos Visual Studio\\mangaRebyuAPI\\mangaRebyuDesktop\\BusinessLayer\\BusinessLayer.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\User\\source\\repos\\Manga-Rebyu\\mangaRebyuDesktop\\BusinessLayer\\BusinessLayer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
